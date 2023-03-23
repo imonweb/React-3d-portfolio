@@ -7,7 +7,8 @@ const Section = styled.div`
 `
 const Container = styled.div`
  width: 1400px;
- background-color: rebeccapurple;
+ display: flex;
+ justify-content: space-between;
 `
 const Links = styled.div`
  
@@ -46,7 +47,7 @@ const Navbar = () => {
           </List>
         </Links>
         <Icons>
-          <Icons src="./img/search.png" />
+          <Icon src="./img/search.png" />
           <Button>Hire now</Button>
         </Icons>
       </Container>

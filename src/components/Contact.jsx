@@ -54,12 +54,16 @@ const Right = styled.div`
   align-items: center;
   justify-content: center;
 `
+
+const handleSubmit = e => {
+  e.preventDefault()
+}
 function Contact() {
   return (
     <Section>
       <Container>
         <Left>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Title>Contact Us</Title>
             <Input placeholder="Name" /> 
             <Input placeholder="Email" /> 
@@ -68,7 +72,7 @@ function Contact() {
               name="message"
               rows={10}
             /> 
-            <Button>Send</Button>
+            <Button type="submit">Send</Button>
           </Form>
         </Left>
         <Right>

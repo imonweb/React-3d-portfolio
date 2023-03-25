@@ -14,7 +14,7 @@ const Map = () => {
       projectionConfig={{
         rotate: [-10.0, -52.0, 0],
         center: [-5, -3],
-        scale: 1600
+        scale: 2000
       }}
       style={{width:"100%", height:"100%"}}
     >
@@ -31,7 +31,7 @@ const Map = () => {
         }
       </Geographies>
       <Annotation
-        subject={[2.3522, 48.8566]}
+        subject={[-2.2133, 53.0732]}
         dx={-90}
         dy={-30}
         connectorProps={{
@@ -41,25 +41,13 @@ const Map = () => {
         }}
       >
         <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="white">
-          {"Paris"}
+          {"Stoke-on-Trent"}
         </text>
       </Annotation>
-      <Annotation
-        subject={[21.01178, 52.22977]}
-        dx={-90}
-        dy={-30}
-        connectorProps={{
-          stroke: "white",
-          strokeWidth: 2,
-          strokeLinecap: "round"
-        }}
-      >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="white">
-          {"Warsaw"}
-        </text>
-      </Annotation>
+      
     </ComposableMap>
   );
 };
 
 export default Map;
+ 

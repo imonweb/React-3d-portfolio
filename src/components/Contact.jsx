@@ -1,5 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import styled from "styled-components";
 import Map from './Map'
 
 const Section = styled.div`
@@ -55,24 +56,49 @@ const Right = styled.div`
   justify-content: center;
 `
 
-const handleSubmit = e => {
-  e.preventDefault()
-}
+
 function Contact() {
+  const ref = useRef()
+  const [success,setSuccess] = useState(null)
+
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    emailjs
+        .sendForm(
+          "service_o46hgfu",
+          "template_7dbao09",
+          ref.current,
+          "sHthpybwCAK4YRiwC"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setSuccess(true);
+          },
+          (error) => {
+            console.log(error.text);
+            setSuccess(false);
+          }
+        );
+
+  }
   return (
     <Section>
       <Container>
         <Left>
-          <Form onSubmit={handleSubmit}>
+          <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Us</Title>
-            <Input placeholder="Name" /> 
-            <Input placeholder="Email" /> 
+            <Input placeholder="Name" name="name"/> 
+            <Input placeholder="Email" name="email"/> 
             <TextArea 
               placeholder="Write your message" 
               name="message"
               rows={10}
             /> 
             <Button type="submit">Send</Button>
+             {success &&
+              "Your message has been sent. We'll get back to you soon :)"}
           </Form>
         </Left>
         <Right>

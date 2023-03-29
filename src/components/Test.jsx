@@ -16,11 +16,11 @@ const Test = () => {
         <OrbitControls enableZoom={false}/> 
         <ambientLight intensity={1} />
         <directionalLight position={[3,2,1]} />
-        <mesh>
+     
           <boxGeometry args={[1,1,1]} />
           <meshStandardMaterial color="red" />
 
-        </mesh>
+        
       </Canvas>
     </Container>
   )

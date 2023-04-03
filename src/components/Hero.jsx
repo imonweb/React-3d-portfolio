@@ -103,7 +103,7 @@ const Hero = () => {
               distort={0.5}
               speed={2}
               />
-              </Sphere>
+            </Sphere>
           </Canvas>
           <Img src="./img/moon.png" /> 
         </Right>

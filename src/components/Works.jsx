@@ -82,7 +82,13 @@ const Works = () => {
           </List>
         </Left>
         <Right>
-          {work === "Web Design" ? (<WebDesign /> ) : work === "Development" ? (<Development /> ) : <ProductDesign /> }
+          {work === "Web Design" ? (
+            <WebDesign /> 
+          ) : work === "Development" ? (
+            <Development /> 
+          ) : ( 
+          <ProductDesign /> 
+          )}
         </Right>
       </Container>
     </Section>

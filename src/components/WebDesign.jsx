@@ -24,7 +24,7 @@ const WebDesign = () => {
       </Stage>
       <OrbitControls enableZoom />
     </Canvas>
-     <Desc>
+      <Desc>
         We design products with a strong focus on both world class design and
         ensuring your product is a market success.
       </Desc>

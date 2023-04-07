@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Mac from './Mac'
 
-const Desc = styled.div `
+const Desc = styled.div`
   width: 200px;
   height: 70px;
   padding: 20px;
@@ -22,7 +22,7 @@ const WebDesign = () => {
       <Stage environment="city" intensity={0.6}>
         <Mac />
       </Stage>
-      <OrbitControls enableZoom />
+      <OrbitControls enableZoom={false} autoRotate />
     </Canvas>
       <Desc>
         We design products with a strong focus on both world class design and

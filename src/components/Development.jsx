@@ -22,7 +22,7 @@ const Development = () => {
         <Stage environment="city" intensity={0.6}>
           <Atom />
         </Stage>
-        <OrbitControls enableZoom />
+        <OrbitControls enableZoom={false} autoRotate  />
       </Canvas>
       <Desc>
         We design products with a strong focus on both world class design and
